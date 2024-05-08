@@ -22,7 +22,7 @@ function App() {
     </div>
   );
 }
-function SkillList(props) {
+function SkillList({ skillName }) {
   // const getData = dataSkills;
   //  const numSkills = getData.length;
   return (
@@ -30,7 +30,7 @@ function SkillList(props) {
       className="skill SkillList card"
       style={{ backgroundColor: "white", width: 120, height: 80 }}
     >
-      {props.skillName}
+      {skillName}
     </div>
   );
 }
@@ -38,12 +38,12 @@ function SkillList(props) {
 function Skill() {
   return <div></div>;
 }
-function Avatar(props) {
+function Avatar({ name }) {
   return (
     <div>
       <img
         className="avatar"
-        src={props.name}
+        src={name}
         // style={{ width: 445, height: 470 }}
         alt="Franklyn Reyes"
       />
@@ -51,12 +51,12 @@ function Avatar(props) {
   );
 }
 
-function Intro(props) {
-  console.log(props);
+function Intro({ name }) {
+  // console.log(props);
   return (
     <div>
       <h1>Franklyn Reyes</h1>
-      <p>{props.name}</p>
+      <p>{name}</p>
     </div>
   );
 }
